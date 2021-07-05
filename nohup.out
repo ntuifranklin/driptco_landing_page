@@ -1,0 +1,108 @@
+=> Booting Puma
+=> Rails 6.1.4 application starting in development 
+=> Run `bin/rails server --help` for more startup options
+Puma starting in single mode...
+* Puma version: 5.3.2 (ruby 3.0.0-p0) ("Sweetnighter")
+*  Min threads: 5
+*  Max threads: 5
+*  Environment: development
+*          PID: 30665
+* Listening on http://0.0.0.0:80
+Use Ctrl-C to stop
+Started GET "/" for 207.172.135.93 at 2021-07-01 01:25:13 -0400
+Cannot render console from 207.172.135.93! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 432)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 127.1ms | Allocations: 14954)
+Completed 200 OK in 141ms (Views: 129.8ms | ActiveRecord: 0.0ms | Allocations: 18094)
+
+
+Started GET "/signup" for 207.172.135.93 at 2021-07-01 01:25:16 -0400
+Cannot render console from 207.172.135.93! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LearnmoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering learnmore/index.html.erb within layouts/application
+  Rendered learnmore/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 3852)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 8261)
+Completed 200 OK in 38ms (Views: 22.7ms | ActiveRecord: 3.7ms | Allocations: 13497)
+
+
+Started POST "/signup" for 207.172.135.93 at 2021-07-01 01:25:19 -0400
+Cannot render console from 207.172.135.93! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LearnmoreController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "visitor"=>{"email"=>"", "city"=>"", "state"=>""}, "commit"=>"Subscribe"}
+  Rendering layout layouts/application.html.erb
+  Rendering learnmore/index.html.erb within layouts/application
+  Rendered learnmore/index.html.erb within layouts/application (Duration: 10.4ms | Allocations: 5148)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 9508)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 10742)
+
+
+Started POST "/signup" for 207.172.135.93 at 2021-07-01 01:26:29 -0400
+Cannot render console from 207.172.135.93! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LearnmoreController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "visitor"=>{"email"=>"Franklin@pw.com", "city"=>"Hello", "state"=>"Yes"}, "commit"=>"Subscribe"}
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/learnmore_controller.rb:9:in `create'
+  [1m[36mVisitor Create (2.0ms)[0m  [1m[32mINSERT INTO `visitors` (`email`, `city`, `state`, `created_at`, `updated_at`) VALUES ('Franklin@pw.com', 'Hello', 'Yes', '2021-07-01 05:26:29.780993', '2021-07-01 05:26:29.780993')[0m
+  ↳ app/controllers/learnmore_controller.rb:9:in `create'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/learnmore_controller.rb:9:in `create'
+Redirected to http://driptco.com/
+Completed 302 Found in 85ms (ActiveRecord: 4.0ms | Allocations: 2469)
+
+
+Started GET "/" for 207.172.135.93 at 2021-07-01 01:26:29 -0400
+Cannot render console from 207.172.135.93! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 4521)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms | Allocations: 4970)
+
+
+Started GET "/signup" for 207.172.135.93 at 2021-07-01 01:26:52 -0400
+Cannot render console from 207.172.135.93! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LearnmoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering learnmore/index.html.erb within layouts/application
+  Rendered learnmore/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1502)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 5843)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.0ms | Allocations: 6308)
+
+
+Started GET "/" for 207.172.135.93 at 2021-07-01 01:31:00 -0400
+Cannot render console from 207.172.135.93! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 49)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.5ms | Allocations: 4572)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.0ms | Allocations: 5019)
+
+
+Started GET "/signup" for 207.172.135.93 at 2021-07-01 01:31:06 -0400
+Cannot render console from 207.172.135.93! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by LearnmoreController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering learnmore/index.html.erb within layouts/application
+  Rendered learnmore/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1505)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 5868)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 6344)
+
+
+- Gracefully stopping, waiting for requests to finish
+=== puma shutdown: 2021-07-01 01:31:21 -0400 ===
+- Goodbye!
+Exiting

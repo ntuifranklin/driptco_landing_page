@@ -1,0 +1,25 @@
+	
+<section id="contact" class="contact section-bg">
+
+      <div class="container">
+         <div class="jumbotron text-center">
+           <h1 class="display-3">
+		      <% unless flash.empty? %>
+  			<% flash.each do |type,message| %>
+  			   <%= message %>
+			<% end %>
+			<% flash.clear %>
+		      <% end %>
+	   </h1>
+         </div>
+
+    </div>
+ </section>
+
+
+
+
+
+
+
+

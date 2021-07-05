@@ -1,0 +1,77 @@
+	
+<section id="contact" class="contact section-bg">
+
+      <div class="container">
+        <div class="section-title">
+          <h2>Learn More</h2>
+        <p> We will get back to you as soon as possible </p>
+	</div>
+      </div>
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6 d-flex align-items-stretch contact-form-wrap">
+              
+	    <%= form_with model: @visitor, url: signup_path do |form| %>
+
+              <div class="mb-3">
+                <% if @visitor.errors.any?  %>
+                  <div class="alert alert-danger">
+                     <% @visitor.errors.full_messages.each do |message| %>
+                       <div>  <%= message %> </div>
+                     <% end %>
+                  </div>
+                <% elsif @visitor.save %>
+                        <% flash.each do |type, msg| %>
+                          <div class="alert alert-success">
+                           <%= msg %>
+                          </div>
+                        <% end %> 
+		 <% else %>
+			<% flash.each do |type, msg| %>
+                          <div class="alert alert-success">
+                           <%= msg %>
+                          </div>
+                        <% end %>
+                 <% end %>
+              </div>
+
+	       <div class="form-row">
+                 <div class="col-lg-12 form-group">
+                   <%= form.label :email  %>
+                   <%= form.text_field :email, class: "form-control", placeholder: "visitor@driptco.com"  %>
+                 </div>
+               </div
+>
+		<div class="form-row">
+                 <div class="col-lg-12 form-group">
+                   <%= form.label :city  %>
+                   <%= form.text_field :city, class: "form-control", placeholder: "Philadelphia"  %>
+                 </div>
+               </div>             
+	      <div class="form-row">
+                 <div class="col-lg-12 form-group">
+                   <%= form.label :state  %>
+                   <%= form.text_field :state, class: "form-control", placeholder: "Pennsylvania"  %>
+                 </div>
+               </div> 
+	    
+	       <div class="text-center"> <%= form.submit "Subscribe", class: "btn btn-primary" %>    </div>
+           
+	    <% end  %>
+	</div>
+
+      </div>
+
+    </div>
+ </section>
+
+
+
+
+
+
+
+

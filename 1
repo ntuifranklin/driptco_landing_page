@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DRIPTCO</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+  
+ 
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+ 
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+	<!-- Vendor CSS Files -->
+  	
+    
+  </head>
+
+  <body>
+
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container d-flex">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light">
+	  <%= link_to root_path do %>
+    		<span> Driptco</span>
+	  <% end %>	
+        </h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><%= link_to "Home",root_path %>  </li>
+          <li class="active"><%= link_to "Learn More",signup_path %>  </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main id="main"> 
+    <%= yield %>
+  </main>
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <%= Time.zone.now.year %><strong><span>DRIPTCO</span></strong>. All Rights Reserved
+      </div>
+    </div>
+  </footer>
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+ 
+  </body>
+</html>
