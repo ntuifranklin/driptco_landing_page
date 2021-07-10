@@ -11,6 +11,7 @@ module Server
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.1
     config.exceptions_app = self.routes # for errors
+    config.assets.initialize_on_precompile=false
     # config.force_ssl = true
     # config.force_ssl = true
     # Configuration for the application, engines, and railties goes here.

@@ -10,4 +10,4 @@ systemctl stop httpd
 
 
 # start the server
-/home/franklin/.rvm/gems/ruby-3.0.0/bin/rails server -b 0.0.0.0 -p 80  
+rails server -b 0.0.0.0 -p 80 
