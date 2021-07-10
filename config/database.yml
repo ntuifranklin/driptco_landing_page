@@ -50,6 +50,6 @@ test:
 #
 production:
   <<: *default
-  database: server_production
+  database: server_development
   username: mbanga
   password: "nYrKZ}F3rT9Tu@,^(iCZp3YLwi9wBN1k"
