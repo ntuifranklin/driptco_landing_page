@@ -21,6 +21,6 @@ echo "precompiling everything for development environment"
 RAILS_ENV=development rails assets:precompile
 
 # start the server
-echo "startig the server"
+echo "starting the server"
 rails server -b 0.0.0.0 -p 80 -e development 
  

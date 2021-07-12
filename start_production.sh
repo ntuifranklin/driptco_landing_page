@@ -7,7 +7,7 @@ echo "Disabling httpd service"
 systemctl disable httpd
 
 # now we stop httpd daemon
-echo "Stopping httpd service from running"
+echo "Stopping httpd services from running"
 systemctl stop httpd
 
 # precompile for development
@@ -15,5 +15,5 @@ echo "precompiling everything for production environment"
 RAILS_ENV=production rails assets:precompile
 
 # start the server
-echo "startig the server in production" 
+echo "starting the server in production" 
 rails server -b 0.0.0.0 -p 80 -e production  
