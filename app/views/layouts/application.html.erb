@@ -6,17 +6,17 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %> 
    
+    <%# Vendor CSS Files %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %> 
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-	<!-- Vendor CSS Files -->
-  	
+    
+    <%= favicon_link_tag 'img/apple-touch-icon.png', rel: 'apple-touch-icon', type:'image/png' %>  	
     
   </head>
 
   <body>
 
-
-  <!-- ======= Header ======= -->
+<!-- ======= Header ======= -->
   <header id="header">
     <div class="container d-flex">
 
@@ -30,8 +30,8 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><%= link_to "Home",root_path %>  </li>
-          <li class="active"><%= link_to "Learn More",signup_path %>  </li>
+          <li><%= link_to "Home",root_path %>  </li>
+          <li><%= link_to "Learn More",signup_path %>  </li>
         </ul>
       </nav>
 
@@ -44,7 +44,7 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <%= Time.zone.now.year %><strong><span>DRIPTCO</span></strong>. All Rights Reserved
+        &copy; Copyright <%= Time.zone.now.year %>&nbsp;&nbsp;<strong><span>DRIPTCO</span></strong>&nbsp;&nbsp;All Rights Reserved
       </div>
     </div>
   </footer>
