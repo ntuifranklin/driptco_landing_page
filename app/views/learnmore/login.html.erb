@@ -1,0 +1,48 @@
+<section id="contact" class="contact section-bg">
+
+      <div class="container-fluid">
+        <div class="section-title">
+          <h2>Log In for Access</h2>
+        <p> Log in Please !  </p>
+	</div>
+      </div>
+
+      <div class="container center">
+
+        <div class="row">
+
+          <div class="col-lg-6 d-flex form-signin">
+              
+	    <%= form_with model: @user, url: login_path do |form| %>
+
+	       <div class="form-row">
+                 <div class="col-lg-12 form-group">
+                   <%= form.label :email  %>
+                   <%= form.text_field :email, class: "form-control", placeholder: "someone@domain.org"  %>
+                 </div>
+               </div
+>
+		<div class="form-row">
+                 <div class="col-lg-12 form-group">
+                   <%= form.label :password  %>
+                   <%= form.password_field :password, class: "form-control", placeholder: "Enter password"  %>
+                 </div>
+               </div>             
+	    
+	       <div class="text-center"> <%= form.submit "Submit", class: "btn btn-primary lg" %>    </div>
+           
+	    <% end  %>
+	</div>
+
+      </div>
+
+    </div>
+ </section>
+
+
+
+
+
+
+
+

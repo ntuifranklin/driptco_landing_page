@@ -6,6 +6,12 @@ Rails.application.routes.draw do
   get "signup", to: "learnmore#index"
   post "signup", to: "learnmore#create"
   patch "signup", to: "learnmore#index"
+  get "login", to: "learnmore#login"
+  post "login", to: "learnmore#processlogin"
+  get "visitors", to: "learnmore#visitorslist"
+  patch "visitors", to: "learnmore#visitorslist"
+  post "visitors", to: "learnmore#visitorslist"
+  patch "login", to: "learnmore#visitorslist"
   get "thankyou", to: "learnmore#thankyou"
   get root to: "home#index"
   match "/400", to: "errors#not_found", via: :all 

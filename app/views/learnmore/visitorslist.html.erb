@@ -1,0 +1,32 @@
+<section>
+<div class="container-fluid table-responsive">
+
+<%  if !@visitors.nil?  %>
+<h1>List the visitors here </h1>
+       <table class="table table-hover table-striped">
+         <tr>
+          <td> Date</td> 
+          <td> Email</td> 
+          <td> City</td>
+          <td> State</td>
+         </tr>
+   
+         <% @visitors.each do |visitor| %>
+          <tr>
+              <td><%= visitor.created_at %></td>
+              <td><%= visitor.email %></td>
+              <td><%= visitor.city %></td>
+              <td><%= visitor.state %></td>
+           </tr>
+          <% end %> 
+        </table>
+<% else %>
+         <div class="jumbotron text-center">
+           <div class="display-3 alert alert-danger">
+           	Ouch ! 
+		You do not seem to have access to this ressource !
+	   </div>
+         </div>
+<%  end  %>
+</div>
+</section>

@@ -1,11 +1,9 @@
-
 class LearnmoreController < ApplicationController
 	def index
 		@visitor = Visitor.new	
 	end
 	
 	def create
-		
 		email = params[:visitor][:email]
                 if Visitor.exists?(email: email)
 	           flash[:alert] = "Thanks again ! You already subscribed ! "
@@ -27,10 +25,43 @@ class LearnmoreController < ApplicationController
 	def thankyou
 
 	end
+	
+	def visitorslist
+	
+	end 
+	
+	def login
+		
+	end
+
+	def processlogin
+		email = params[:email]
+		pass = params[:password]
+                if User.exists?(email:email) 
+		   @user = User.find_by(email: email)
+ 
+		   if !@user.nil? 
+	             @visitors = Visitor.all
+		   else
+		     @user = nil
+		     @visitors = nil
+		   end
+                end
+
+		render :visitorslist
+	end 
+
 
 	private
+
 
 	def allowed_visitor_params
 	   params.require(:visitor).permit(:email, :city, :state)
 	end
+
+
+	def allowed_visitorslist_params
+	   params.require(:user).permit(:email, :password)
+	end
+
 end

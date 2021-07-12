@@ -13,6 +13,14 @@ gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
 
+# faker for seeding and testing
+gem 'faker'
+
+# excel file creation 
+# gem 'axlsx_rails'
+gem 'axlsx'
+gem 'caxlsx_rails'
+# needed for production to work well. Do't know why.
 gem 'therubyracer'
 gem 'coffee-rails'
 gem 'uglifier'
