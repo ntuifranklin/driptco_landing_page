@@ -1,8 +1,10 @@
 <section>
 <div class="container-fluid table-responsive">
 
-<%  if !@visitors.nil?  %>
+<%  if (@visitors != nil && !@visitors.nil?)  %>
 <h1>List the visitors here </h1>
+
+	
        <table class="table table-hover table-striped">
          <tr>
           <td> Date</td> 
@@ -23,8 +25,7 @@
 <% else %>
          <div class="jumbotron text-center">
            <div class="display-3 alert alert-danger">
-           	Ouch ! 
-		You do not seem to have access to this ressource !
+           	Something happened, but I'm not telling you what. 
 	   </div>
          </div>
 <%  end  %>

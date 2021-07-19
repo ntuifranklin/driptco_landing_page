@@ -7,13 +7,21 @@
 	</div>
       </div>
 
-      <div class="container center">
 
-        <div class="row">
+        <div class=" form-group row">
 
-          <div class="col-lg-6 d-flex form-signin">
+          <div class="col-lg-6">
               
-	    <%= form_with model: @user, url: login_path do |form| %>
+	    <%= form_with model: @user, class: "php-email-form contact-form-wrap" ,url: login_path do |form| %>
+
+		<div class="mb-3">
+		        <% flash.each do |type, msg| %>
+                          <div class="alert alert-danger">
+                           <%= msg %>
+                        </div>
+                        <% end %>
+
+		</div>
 
 	       <div class="form-row">
                  <div class="col-lg-12 form-group">
@@ -29,16 +37,19 @@
                  </div>
                </div>             
 	    
-	       <div class="text-center"> <%= form.submit "Submit", class: "btn btn-primary lg" %>    </div>
+               <div class="form-row">
+                 <div class="col-lg-12 form-group">
+                    <div> <%= recaptcha_tags theme: 'dark' %>  </div>
+                    <div> <%= form.button "Submit", class: "btn btn-primary btn-dark btn-lg" %>    </div>
+                 </div>
+               </div>
            
 	    <% end  %>
 	</div>
 
       </div>
 
-    </div>
  </section>
-
 
 
 

@@ -14,13 +14,13 @@
 	    <%= form_with model: @visitor, class: "php-email-form contact-form-wrap" ,url: signup_path do |form| %>
 
               <div class="mb-3">
-                <% if (@visitor != nil && @visitor.errors.any?)  %>
+                <% if @visitor.errors.any?  %>
                   <div class="alert alert-danger">
                      <% @visitor.errors.full_messages.each do |message| %>
                        <div>  <%= message %> </div>
                      <% end %>
                   </div>
-                <% elsif ( @visitor != nil && @visitor.save )%>
+                <% elsif @visitor.save %>
                         <% flash.each do |type, msg| %>
                           <div class="alert alert-success">
                            <%= msg %>
@@ -53,14 +53,9 @@
                    <%= form.label :state  %>
                    <%= form.text_field :state, class: "form-control", placeholder: "Pennsylvania"  %>
                  </div>
-               </div>
-
-              <div class="form-row">
-                 <div class="col-lg-12 form-group">
-		    <div> <%= recaptcha_tags theme: 'dark' %>  </div>
-	            <div> <%= form.button "Subscribe", class: "btn btn-primary btn-dark btn-lg" %>    </div>
-                 </div>
-               </div>
+               </div> 
+	    
+	       <div> <%= form.button "Subscribe", class: "btn btn-primary btn-dark btn-lg" %>    </div>
            
 	    <% end  %>
 	</div>
@@ -68,6 +63,7 @@
       </div>
 </div>
  </section>
+
 
 
 

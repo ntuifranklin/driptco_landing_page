@@ -5,4 +5,10 @@ do
 	
 done
 
+echo "killing any instances of this application running if any"
 rm -fr tmp/pids/*.pid
+
+echo "Stopping any httpd service running"
+systemctl stop httpd
+systemctl stop nginx
+
