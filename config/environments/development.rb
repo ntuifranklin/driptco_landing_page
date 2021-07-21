@@ -77,5 +77,22 @@ Rails.application.configure do
   # config.hosts << /[a-z0-9]+\.driptco\.com/ 
  
   config.hosts << "www.driptco.com"
-  config.hosts << "driptco.com" 
+  config.hosts << "driptco.com"
+
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_options = {from: 'no-reply@driptco.com'}
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+     address:             'mail.driptco.com',
+     port:                 587,
+     domain:               'driptco.com',
+     user_name:            'info@driptco.com',
+     password:             '3rytKQJipa&Z',
+     authentication:       'plain',
+     enable_starttls_auto: true
+  }
+
+
+ 
 end

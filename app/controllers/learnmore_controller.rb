@@ -4,7 +4,6 @@ class LearnmoreController < ApplicationController
 	end
 	
 	def create
-		flash.clear
 		@visitor = Visitor.new(allowed_visitor_params)
 		email = params[:visitor][:email]
 		captcha_message = "The data you entered for the CAPTCHA wasn't correct.  Please try again"
@@ -16,6 +15,7 @@ class LearnmoreController < ApplicationController
 		   render :thankyou
 		elsif @visitor.save
                       flash[:alert] = "Thanks for Subscribing ! We will be in touch !"
+		      WelcomeEmailMailer.with(visitor: @visitor).welcome_email.deliver_now
                       render :thankyou
                 elsif @visitor.errors.any?
                       render :index
@@ -39,7 +39,6 @@ class LearnmoreController < ApplicationController
 	end
 
 	def processlogin
-		flash.clear
 		@user = User.new(allowed_visitorslist_params) 
                 email = params[:user][:email]
                 pass = params[:user][:password] 
