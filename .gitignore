@@ -35,5 +35,6 @@
 yarn-debug.log*
 .yarn-integrity
 
-/config/credentials/production.key
-/config/credentials/development.key
+# /config/credentials/*
+/config/credentials/production.*
+/config/credentials/development.*
