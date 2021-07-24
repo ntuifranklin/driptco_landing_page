@@ -1,5 +1,5 @@
 <section id="contact" class="contact section-bg">
-
+    <div class="container"> 
       <div class="container-fluid">
         <div class="section-title">
           <h2>Log In for Access</h2>
@@ -8,9 +8,9 @@
       </div>
 
 
-        <div class=" form-group row">
+        <div class="form-group row justify-content-center">
 
-          <div class="col-lg-6">
+          <div class="col-lg-6 col-lg-offset-5 align-center">
               
 	    <%= form_with model: @user, class: "php-email-form contact-form-wrap" ,url: login_path do |form| %>
 
@@ -48,7 +48,7 @@
 	</div>
 
       </div>
-
+   </div>
  </section>
 
 
