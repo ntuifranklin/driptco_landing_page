@@ -14,7 +14,7 @@ Rails.application.configure do
 
 
   # Full error reports are disabled and caching is turned on.
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
@@ -131,5 +131,6 @@ Rails.application.configure do
      authentication:       'plain',
      enable_starttls_auto: true 
   }
-
+ # tell production to use a master key
+ config.require_master_key = true
 end

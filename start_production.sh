@@ -7,8 +7,7 @@
 ./stop_any_pid.sh
 
 # precompile for development
-echo "precompiling everything for production environment"
-RAILS_ENV=production rails assets:precompile
+./compile_for_production.sh
 
 # start the server
 echo "starting the server in production" 
