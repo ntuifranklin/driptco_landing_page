@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'errors/not_found'
-  get 'errors/internal_server_error'
+  # get 'errors/not_found'
+  # get 'errors/internal_server_error'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   # GET /learnmore
   get "signup", to: "learnmore#index"
