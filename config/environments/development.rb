@@ -93,6 +93,8 @@ Rails.application.configure do
      enable_starttls_auto: true
   }
 
-
+# tell development to use a master key
+  config.require_master_key = true
  
 end
+
