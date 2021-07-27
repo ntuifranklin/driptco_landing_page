@@ -10,7 +10,7 @@ require 'faker'
 require 'bcrypt'
 
 Visitor.destroy_all
-
+"""
 50.times do |index|
 	Visitor.create!(
 	  email: Faker::Internet.email,
@@ -18,7 +18,7 @@ Visitor.destroy_all
 	  state: Faker::Address.state
 	)
 end
-
+"""
 User.destroy_all
 
 auth_emails = ["daymonanderson2@gmail.com","ntuifranklin2005@gmail.com","fnkokamn@terpmail.umd.edu"]
