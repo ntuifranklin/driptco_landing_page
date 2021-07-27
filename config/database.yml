@@ -13,20 +13,20 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: mbanga
-  password: "nYrKZ}F3rT9Tu@,^(iCZp3YLwi9wBN1k"
+  # username: <%= ENV['DRIPTCO_DATABASE_USER'] %>
+  # password: <%= ENV['DRIPTCO_DATABASE_PASSWORD'] %>
   socket: /tmp/mysql.sock
 
 development:
   <<: *default
-  database: server_development
+  url: <%= ENV['DRIPTCO_DEVELOPMENT_DATABASE_URL'] %>
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: server_test
+  url: <%= ENV['DRIPTCO_TEST_DATABASE_URL'] %>
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -50,6 +50,4 @@ test:
 #
 production:
   <<: *default
-  database: server_development
-  username: mbanga
-  password: "nYrKZ}F3rT9Tu@,^(iCZp3YLwi9wBN1k"
+  url: <%= ENV['DRIPTCO_PRODUCTION_DATABASE_URL'] %>

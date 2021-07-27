@@ -23,7 +23,8 @@
       <div class="logo mr-auto">
         <h1 class="text-light">
 	  <%= link_to root_path do %>
-    		<span> Driptco</span>
+		<%= image_tag "img/dript-logo-final-primary.jpg", alt: "",  loading: "driptco logo", class: "img-fluid"  %>
+	  
 	  <% end %>	
         </h1>
       </div>
@@ -32,7 +33,6 @@
         <ul>
           <li><%= link_to "Home",root_path %>  </li>
           <li><%= link_to "Learn More",signup_path %>  </li>
-          <!-- <li><%= link_to "Login",login_path %>  </li> -->
         </ul>
       </nav>
 
@@ -45,7 +45,11 @@
   <footer id="footer">
     <div class="container">
       <div class="copyright">
-        &copy; Copyright <%= Time.zone.now.year %>&nbsp;&nbsp;<strong><span>DRIPTCO</span></strong>&nbsp;&nbsp;All Rights Reserved
+        &copy; Copyright &nbsp;&nbsp; <%= Time.zone.now.year %>&nbsp;&nbsp;
+		<strong>
+			<span>DRIPTCO</span>
+		</strong>
+		&nbsp;&nbsp;All Rights Reserved
       </div>
     </div>
   </footer>
