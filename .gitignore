@@ -38,3 +38,7 @@ yarn-debug.log*
 /config/credentials/production.*
 /config/credentials/development.*
 # /driptco.conf
+
+/config/credentials/tets.key
+
+/config/credentials/test.key
