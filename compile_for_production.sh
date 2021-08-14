@@ -2,7 +2,7 @@
 # This scripts starts the rails app  production server
 
 echo "precompiling everything for production environment"
-RAILS_ENV=production rails assets:precompile
+RAILS_ENV=production /home/franklin/.rvm/gems/ruby-3.0.0/bin/rails assets:precompile
 RAILS_ENV=production rake db:migrate 
 
 echo "changing file permission for tmp and public folder"
