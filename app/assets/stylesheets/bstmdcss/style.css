@@ -1570,6 +1570,6 @@ section {
   bottom: 0 ;
 }
 
-.transparent {
- opacity: 0.63 ;
+.trans {
+ background-color: transparent;
 }
