@@ -1546,10 +1546,6 @@ section {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  opacity: 0.1;
-  /* added for positioning */
-  bottom: 0;
-  left: 0; 
 }
 
 
@@ -1567,3 +1563,10 @@ section {
   position: relative;
 }
 
+
+/* Trying to position learn more form at the bottom left */
+.bottomleft {
+  opacity: 0.1;
+  position: 0 ;
+  bottom: 0 ;
+}
