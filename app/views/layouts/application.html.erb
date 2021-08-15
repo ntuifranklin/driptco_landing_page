@@ -31,20 +31,12 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li
-           <% if request.fullpath == root_path %>
-             class="active"
-           <% end %> 
-          >
+          <li <% if request.fullpath == root_path then %>  class="active" <% end %> >
            <%= link_to "Home",root_path %> 
           </li>
-          <li
-         
-            <% if request.fullpath == signup_path %>
-              class="active"
-            <% end %>
-           ><%= link_to "Learn More",signup_path %> 
-           </li>
+          <li <% if request.fullpath == signup_path %> class="active" <% end %> >
+            <%= link_to "Learn More",signup_path %> 
+          </li>
         </ul>
       </nav>
 
