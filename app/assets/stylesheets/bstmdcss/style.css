@@ -1566,7 +1566,7 @@ section {
 
 /* Trying to position learn more form at the bottom left */
 .bottomleft {
-  opacity: 0.1;
+  opacity: 0.3;
   left: 0 ;
   bottom: 0 ;
 }
