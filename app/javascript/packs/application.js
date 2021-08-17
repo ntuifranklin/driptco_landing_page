@@ -9,8 +9,8 @@ require("channels")
 require("jquery")
 import "bootstrap"
 window.jQuery = window.$ = jQuery;
-//console.log("Jquery was loaded maybe ?")
-/**/
+console.log("Jquery was loaded maybe ?")
+/*
 require("packs/js/bootstrap.bundle.min")
 require("packs/js/validate")
 require("packs/js/jquery.sticky")
@@ -20,6 +20,6 @@ require("packs/js/isotope.pkgd.min")
 require("packs/js/owl.carousel.min")
 require("packs/js/venobox.min")
 require("packs/js/main")
-/**/
-//console.log("All js files loaded")
+*/
+console.log("All js files loaded")
 
